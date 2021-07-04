@@ -2,17 +2,20 @@
 
 **Basic Info**
 
-Current Version : 1.0.9 Lua (Stable) <br>
+Current Version : 2.0 Batasu (beta) <br>
+<!--
 New Dev Version : 2.0 (Batasu-Development Release) (Alpha) <br>
-Engine Version  : 1.3.8 <br>
-
+-->
+Engine Version  : 1.3.14 <br>
+<!--
 ![ak](/images/alpha.jpg)
-
-
 
 > This project is currently under heavy development. 
 > Currently in **alpha** stage. Please wait for **beta** release. 
+-->
 
+### Base Project 
+https://github.com/farhansadik/echominal
 
 
 **What's New** 

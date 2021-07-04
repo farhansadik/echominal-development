@@ -1,0 +1,27 @@
+--------------------------------------
+Bugs (previous)
+--------------------------------------
+1. Echominal Script can't detect termux version  // 4 > About
+    > removed this option from about 
+2. cat: /data/data/com.termux/files/home/.config/echominal/shell_style.cfg // Failed to operate // main screen
+3. CCLI failed to install // /data/data/com.termux/files/home/.config/ccli/termux.cfg
+4. New alias wanted for launch script // `engine` is failed to run
+5. no log output has been found in ~/.log dir
+6. bashrc failed to generate/operate/run
+7. failed to create/copy/move .scripts file to $HOME
+8. zsh is default shell, make sure alias setup in zshrc
+
+--------------------------------------
+Bugs (new)
+--------------------------------------
+1. Sub Menu in echominal > 1/2/3 > * (back function) // fixed
+2. blink is not working in bluestocks termux 
+3. blink is not working in android termux 
+
+0.1.14 system_maintanance
+   * add rotate message for echominal > 3 > 2 
+   * double pause in (notice) echominal > 3 > 2 [fixed]
+   * echominal > 3 > 1 (notice) repetitive [fixed]
+   * fix broken package is not working [fixed]
+   * pkg show $pack name - working [fixed]
+   * list all package is not working [fixed]

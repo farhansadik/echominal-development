@@ -1,0 +1,6 @@
+.config in $HOME/.config/echominal
+.log in $HOME/.log
+MP3 in /sdcard/MP3
+termux-backtup in /sdcard/termux-backup
+
+*. termux-sudo is required for hakku framework

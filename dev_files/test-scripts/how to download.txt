@@ -1,0 +1,17 @@
+-i - ignore errors
+-c - continue
+-t - use video title as file name
+--extract-audio - extract audio track
+--audio-format mp3 - convert to mp3
+--audio-quality 0 - the best audio quality
+--yes-playlist - affirm that url points to a playlist
+YT_URL - video url from youtube
+
+single entry 
+youtube-dl -i --extract-audio --audio-format mp3 --audio-quality 0 YT_URL
+
+download playlist 
+youtube-dl -ict --yes-playlist --extract-audio --audio-format mp3 --audio-quality 0 https://www.youtube.com/playlist?list=UUCvVpbYRgYjMN7mG7qQN0Pg
+
+retry until success 
+while ! youtube-dl --download-archive downloaded.txt --no-overwrites -ct --yes-playlist --extract-audio --audio-format mp3 --audio-quality 0 --socket-timeout 5 <YT_PlayList_URL>; do echo DISCONNECTED; sleep 5; done

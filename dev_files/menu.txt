@@ -1,0 +1,94 @@
+
+
+  [1] Scripts    							// templete added
+  
+	[1]  Information Gathering 
+	[2]  Vulnerability Analysis
+	[3]  Exploitation Tools
+	[4]  Wireless Attacks
+	[5]  Forensics Tools
+	[6]  Web Applications
+	[7]  Stress Testing
+	[8]  Sniffing & Spoofing
+	[9] Password Attacks
+	[10] Maintaining Access
+	[11] Hardware Hacking
+	[12] Reverse Engineering
+	[13] Reporting Tools
+	[0]  Back
+	
+  [2]  Tools & Utilities					
+  
+	[1]   Htop [Monitoring Tools]			// compleate 
+	[2]   Python 3 							// compleate 
+	[3]   Node.js				 			// compleate
+	[4]   Termux Api 						// 12 left to add
+
+	[8]   Download MP3 from Youtube			// compleate
+	[9]   File Manager 						// compleate
+	[0]   Back								// compleate 
+	
+
+  [3] System Maintanance
+		
+	[1]  Package Manager					// compleate
+		[1]  Install Pckage					// compleate
+		[2]  Reinstall Package				// compleate
+		[3]  Search Package					// compleate
+		[4]  Uninstall/Remove Package		// compleate
+		[5]  Update Packages				// compleate
+		[6]  Clean Cache					// compleate
+		[7]  View Package Information		// compleate
+		[8]  List all available package		// compleate
+		[9]  List currently installed package	// compleate
+		[10] Termux Repository				// added
+		[0]  Back							// compleate
+			
+	[2]  Echominal Settings		
+		 [1] Termux Font					// compleate	
+		 [2] Termux Color Scheme			// compleate
+		 [3] Change echominal shell style	// compleate -- need to add more style
+		 -- change zsh theme 				
+		 [0] Back
+
+		
+	[3]  Termux Backup/Restore
+		-- backup 
+		-- restore 	
+	[4]  Disk Usage
+	[5]  Sytem Information
+	[6]  Network Information
+	[7]  Termux GUI Interface 
+	[8]  
+	[9]  Poweroff
+	[10] Reboot
+	[11] Reboot to Recovery Mode 
+	++ reboot to recovery
+		-- https://android.stackexchange.com/questions/21050/enter-recovery-mode-from-command-line
+		-- https://www.trishtech.com/2015/03/reboot-android-into-recovery/
+		
+	[0]  Back
+
+  [4] About
+  [0] Exit
+
+
+Slot required
+*. ip link 
+*. ip route show
+*. nmap ($ nmap -sn ipaddr)
+*. tracepath
+*. netstat
+	-- needed extra sub menu 
+*. for ssh use 'openssh'
+*. for 'nsloopup' package required 'dnsuitls ' (server domain and ip address)
+*. for dig package required 'dnsuitls '
+
+
+	++ neworking tools 
+	++ Hostname & DNS Info
+	++ Network Interface
+	++ Operating System Info
+	++ whois tool
+	++ ping request
+	++ network info (ipconfig/ifconfig)

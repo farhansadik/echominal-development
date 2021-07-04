@@ -1,0 +1,97 @@
+* Removed 'Termux Version' from about section. Next Termux version (v0.107) 
+   will export TERMUX_VERSION environment variable.
+* Separated script function from main script
+* removed zipc script 
+* removed isox sciprt 
+* added tools function
+* added netinfo 
+* added youtube-dl 
+* added ranger 
+* removed ccli		
+* added main menu list in scripts.bash 
+* removed Hostname & DNS Info
+* Network Interface
+* removed Operating System Info
+* removed whois tool
+* removed ping request
+* removed network info (ipconfig/ifconfig)
+* added extra system_maintanance.bash for maintanance menu // updated to 0.1.11 Alpha 
+* added extra scripts_manager.bash for scripts menu // updated to 0.1.15 Alpha
+* removed 'host_name.cfg'
+* renamed 'user_name.cfg' to 'username'  
+* ccli has been added for test 
+* env file created for test environment 
+* added search in ccli 
+* updated environment file and added mirror patch for legacy setup
+
+0.1.14 system_maintanance (on test)
+   * add rotate message for echominal > 3 > 2 
+   * double pause in (notice) echominal > 3 > 2 
+   * echominal > 3 > 1 (notice) repetitive
+   * fix broken package is not working r
+   * pkg show $pack name - working 
+   * list all package is not working 
+   
+0.1.15 system_maintanance (fixed)
+	* added pause in every menu 
+	* removed fix broken package 
+	* 7 package info has been added 
+	* 0 back pause has been fixed
+	* echominal settings menu has been added 
+	
+1.3.9 echominal
+	* youtube-dl quit function has been deployed [worked ]
+	
+0.1.16 system_maintanance 
+	* fixed package manager > 6/7/8/12 error. 
+	* added termux backup and restore menu
+	* added termux backup function but not ready for deploy
+	
+0.1.17 system_maintanance 
+	* veriable added for destination
+	* added environment setup
+	* ready for deploy
+	* bug fixed 
+
+0.1.18 system_maintanance 
+	* Termux Font
+	* Termux Color Scheme
+	* Change echominal shell style
+	* removed Change user name
+	* bug fixed 
+	* removed zsh style
+
+0.1.19 system_maintanance 
+	* added backup and restore 
+	* added change repo 
+	* added system information
+	* added network info
+
+0.1.20 system_maintanance 
+	* Network Information has been added 
+	* test_promot function has been removed
+	* termux change repo has been added 
+	* Rename "MP3 Converter" to Youtube MP3 Downloader 
+	* added exit in every menu
+
+1.3.11 echominal
+	* removed disk_info function
+	* removed input function 
+	* removed unnessery veriable (oh-my-zsh)
+	* from 'tools & utilities' 5-6-7 has been shut down.
+	* added exit in every menu
+	* added "termux-api" menud in slot 4
+	* 1 2 3 4 5 6 7 8 11 has been added
+	* added 9 and 10 for test
+	* some bug has been fixed! 
+	* 12 will be added letter! 
+1.3.12 echominal
+	* 12 "music player has been added"
+
+0.1.22 system_maintanance 
+	* added reboot to recovery
+	* removed empty slot
+	* bug fixes
+
+1.3.12 WILL BE THE LAST VERSION FOR 1.3 ECHOMINAL 
+NOW ON IT WILL BE 1.4

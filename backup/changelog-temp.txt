@@ -1,0 +1,28 @@
+Hello everyone! Smile
+Phoenix OS v3.6.1 based on Android 7.1 has been released.
+ 
+Notice:
+- If you want to install this version, please use CPU-Z to check if your processor supports SSE4.2 instruction set, 
+- If it does, then you can try this version, if it doesn't, then install the latest 32-bit Phoenix OS version here.
+
+Changelog:
+- Fixed some cloud computer bugs and optimized the experience.
+- Streamlined some pre-installed applications and reduced the package size.
+- Reduced the ads.
+
+Bugs:
+- Chrome keeps crashing since version 76, please use Brave browser or any older Chromium based browser.
+- Videos sometimes freeze.
+- Green screen in Twitch videos.
+- Compiling resources takes too long in PUBG Mobile 0.14.
+- Unity Engine based games crash.
+- If there are any bugs, please reply to this thread.
+ 
+Download:
+.EXE: MEGA     Google Drive
+MD5: 27993be76d8e2b3d0563ce444b88329a
+Size: 665558976 bytes
+
+.ISO: MEGA     Google Drive
+MD5: a011ef25051386f7129c81e94f61640b
+Size: 891289600 bytes

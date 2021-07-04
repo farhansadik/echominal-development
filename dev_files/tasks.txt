@@ -1,0 +1,46 @@
+--------------------------------------
+Basic Info
+--------------------------------------
+Branch Name : Development 
+Current Ver : 1.0.9 Lua (Stable)
+New Dev Ver : 2.0 (Batasu-Development Release) (Alpha)
+
+--------------------------------------
+Tasks To-Do
+--------------------------------------
+[done] *. Remove CCLI. 
+[done] 		* update ccli, add different alies. 
+*. Full VS minimal installation
+	* add basic and more package in installation process
+*. Try to add dialog in installation or dialog based script
+*. Create a new uninstaller / or a reset state
+*. update the update process
+[done] *. remove zipc and isoc sript and its doc files from github
+*. python script implementation
+[done] *. Add separate package manager - options will be like - 
+[done]		* update and upgrade package 
+[done] 		* install package 
+[done]		* search package 
+[done]		* remove package 
+[done] *. add `termux-api` package on installation
+*. su/root package installation as separate 
+*. Separate every operation like arch in installation. Then perform the installation, 
+    see how it works. Based on the report/output create full and minimal installation. 
+    And create a nice output process.
+*. whats new options for test. device will receive updates through git
+[done] *. use loop in every sub options 
+[done] *. remove * from menu options instead use 0
+[done] *. need to add more info about `termux-info`
+[done] *. get android version in termux 
+[done] *. remove 'host_name.cfg'
+[done] *. rename 'user_name.cfg' to 'username' only 
+
+*. add aircrack-ng manual at wiki
+*. add nmap wifi connectivity list mannual
+*. nmap manual - https://www.learntermux.tech/2020/10/Install-Use-Nmap-Termux.html 
+*. need a manual for youtube-dl
+*. need a manual for ranger [file manager]
+*. wiki for termux mirrors
+
+[done]*. add back/quit/exit option in echominal > 2 > 8
+

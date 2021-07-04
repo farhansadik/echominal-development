@@ -1,0 +1,34 @@
+------------------------------------
+package list 
+------------------------------------
+dialog -- not necessery 
+man -- in progress
+bat -- not necessery 
+vim -- not necessery 
+figlet
+git
+python
+python2
+whois -- unable to find in termux 
+ranger
+tracepath -- found [not used in project]
+dnsuitls -- unable to find in termux 
+cowsay
+htop
+termux-tools
+termux-api
+ffmpeg
+pip install youtube-dl
+	
+zip	[not used in project]
+unzip [not used in project]
+zsh
+tar 
+
+nodejs 
+nodejs-lts
+------------------------------------
+Scripts List
+------------------------------------
+nmap - for show wifi connected list 
+aircrack-ng -- unable to find in termux 

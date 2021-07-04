@@ -1,0 +1,23 @@
+--------------------------------------
+Solutions
+--------------------------------------
+1. ping -c 5 127.0.0.1 - works
+2. #!/data/data/com.termux/files/usr/bin/bash termux-setup-storage
+3. termux-reload-settings
+
+working------------------
+*. ifconfig 
+*. ip link 
+*. ip route show
+*. nmap ($ nmap -sn ipaddr)
+*. tracepath
+*. netstat // needed extra sub menu 
+	https://geekflare.com/linux-networking-commands/
+	https://geekflare.com/netstat/
+*. for ssh use 'openssh'
+*. for 'nsloopup' package required 'dnsuitls ' (server domain and ip address)
+*. for dig package required 'dnsuitls '
+
+[added] *. ranger 
+
+https://geekflare.com/linux-networking-commands/

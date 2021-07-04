@@ -1,0 +1,93 @@
+--------------------------------------
+Test 
+--------------------------------------
+*. Ping from solution 1 - test in script 		// ok
+*. check dialog in termux 						// ok
+*. does `cowsay` work? 							// ok
+*. use loop in every sub options				// ok
+*. aircrack-ng not found in termux-repo			// ok
+*. weeman 										// ok
+*. hakku framework								// ok
+*. nmap
+	- nmap can be found in termux-repo
+*. youtube-dl									// ok
+*. ranger 										// ok 
+*. get android version using python script 		// failed 
+*. add rotate message for echominal > 3 > 2 
+*. termux-change-repo
+    /usr/etc/apt/sources.list
+    https://github.com/termux/termux-packages/wiki/Mirrors
+    https://github.com/termux/termux-packages/wiki/Package-Management
+
+++ reboot to recovery
+		-- https://android.stackexchange.com/questions/21050/enter-recovery-mode-from-command-line
+		-- https://www.trishtech.com/2015/03/reboot-android-into-recovery/
+
+*. termux-api 
+	termux-change-repo     
+	termux-info             
+	termux-open-url         
+	termux-reset           
+	termux-wake-lock
+	termux-fix-shebang      
+	termux-open             
+	termux-reload-settings  
+	termux-setup-storage    
+	termux-wake-unlock
+	
+*. ccli commands
+	pkg autoclean			Remove outdated .deb files from the cache.
+	pkg clean				Remove all .deb files from the cache.
+	pkg files <package>		List files installed by specified package.
+	pkg list-all			List all available packages.
+	pkg list-installed		List currently installed packages.
+	pkg reinstall <package>	Re-install specified package.
+	pkg search <query>		Search package by query.
+	pkg show <package>		Show information about specific package.
+	
+*. termux backup and restore 
+	- https://wiki.termux.com/wiki/Backing_up_Termux
+	
+*. termux deisgn theme / env 
+	- https://wiki.termux.com/wiki/Terminal_Settings
+	
+*. GUI
+	- https://wiki.termux.com/wiki/Graphical_Environment
+
+*. termux repository 
+	[try to add this in dialog]
+	game-packages			pkg install game-repo
+	science-packages		pkg install science-repo
+	termux-root-packages	pkg install root-repo
+	x11-packages 			(Android 7+ only)	pkg install x11-repo
+	unstable-packages 		(Android 7+ only)	pkg install unstable-repo
+	
+	mirrors - https://github.com/termux/termux-packages/wiki/Mirrors
+	
+*. hget - https://github.com/bevacqua/hget (converts html site to a plain text)
+
+https://wiki.termux.com/wiki/Main_Page
+
+How can I access files in storage
+	termux-setup-storage
+	https://wiki.termux.com/wiki/FAQ
+	
+How can I keep my data when reinstalling Termux
+	You need to archive contents of these directories:
+		/data/data/com.termux/files/usr
+		/data/data/com.termux/files/home
+	You can use utility tar. Before uninstalling the app, ensure that archives are placed 
+	to safe location such as /sdcard. 
+	https://wiki.termux.com/wiki/Backing_up_Termux
+	
+https://wiki.termux.com/wiki/Termux:API	
+	termux-media-player
+	termux-notification
+	termux-notification-remove
+	- this api has lots of tools 
+	
+	
+termux-wiki 
+https://github.com/termux
+https://github.com/termux/termux-packages/wiki
+https://wiki.termux.com/wiki/FAQ

@@ -3,10 +3,11 @@
 **Basic Info**
 
 Current Version : 2.0 Batasu (beta) <br>
+Engine Version  : 1.3.14 <br>
 <!--
 New Dev Version : 2.0 (Batasu-Development Release) (Alpha) <br>
 -->
-Engine Version  : 1.3.14 <br>
+
 <!--
 ![ak](/images/alpha.jpg)
 
@@ -30,8 +31,8 @@ https://github.com/farhansadik/echominal
 
 ## Contribute
 Before contribute please [read this](CONTRIBUTING.md).
-1. **DO NOT PUSH/MERGE YOUR CODE IN `master` BRANCH**
-2. **PLEASE DEPLOY YOUR CODE IN `development` BRANCH**
+1. Please do not push/merge your code in `master` branch.
+2. Please deploy your code in `development` branch.*
 
 
 

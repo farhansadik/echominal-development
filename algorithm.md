@@ -15,6 +15,16 @@
 `/sdcard/MP3` required for youtube-dl package
 `/sdcard/termux-backup` required for termux backup
 
+**Package List**
+
+# installing packages
+	figlet cowsay htop zsh tar ranger 
+	termux-tools termux-api ffmpeg 
+	python python2 nodejs-lts
+	
+	pip package
+	youtube-dl
+
 ### Development Process (R-L)
 
 ![pro](images/development.png)

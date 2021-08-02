@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 #!/data/data/com.termux/files/usr/bin/bash 
 
-script_version="0.1.03"  # Alpha
+script_version="0.1.05"  # Alpha (pre 0.1.03 Alpha)
 
 # Define variables
 red='\033[1;91m'; deep_green='\033[0;32m'; green='\033[1;92m'; yellow='\033[1;93m'; blue='\033[1;94m'; white='\033[1;97m'; 
 stop='\e[0m'; blink='\e[5m';
 
-def_loc=~/.config/echominal; 													# default clone location
+def_loc=~/.config/echominal/tools/; 													# default clone location
 log=~/.config/echominal/log/system-status.log; 									# for running log  // not used 
 scripts_installation_log=~/.config/echominal/log/scripts_installation.log;		# not used 	
 shell_style=~/.config/echominal/shell_style.cfg;
@@ -22,121 +22,79 @@ function pause(){
 
 main_menu() {
 	# main menu 
-	echo "Broadcasting from scripts manager"; echo 
 
-	# echo "  [1] Weeman [non-root]";
-	# echo "  [2] Hakku Framework [root]"; 
-	# echo "  [3] Aircrack-ng [root]";
+	printf "\n  [1]  Weeman [non-root]\n"; 		# dir 
+	echo "  [2]  Hakku Framework [root]"; 	# dir 
+	echo "  [3]  Aircrack-ng [root]"; 		# package 
+	echo "  [4]  Nmap [on-test]";  			# package 
+	echo "  [5]  Tool-X [on-test]";			# dir 
+	echo "  [6]  Zphisher [on-test]";		# dir 
+	echo "  [7]  ShortUrl [on-test]";		# dir 
+	echo "  [8]  wkhtmltopdf [on-test]";	# custom install (dir)
+	echo "  [9]  wkhtmltojpg [on-test]";    # custom install (dir)
+	echo "  [10] zVirus-Gen [on-test]";		# dir 
+	echo "  [11] bash2mp4 [on-test]";		# dir 
+	echo "  [12] metasploit [on-test]";		# not found 
+	#echo "  [13] Aircrack [on-test]";
 
-	echo " [1]  Information Gathering ";
-	echo " [2]  Vulnerability Analysis";
-	echo " [3]  Exploitation Tools";
-	echo " [4]  Wireless Attacks";
-	echo " [5]  Forensics Tools";
-	echo " [6]  Web Applications";
-	echo " [7]  Stress Testing";
-	echo " [8]  Sniffing & Spoofing";
-	echo " [9]  Password Attacks";
-	echo " [10] Maintaining Access";
-	echo " [11] Hardware Hacking";
-	echo " [12] Reverse Engineering";
-	echo " [13] Reporting Tools";
+	# previous menu 
+	#echo " [1]  Information Gathering ";
+	#echo " [2]  Vulnerability Analysis";
+	#echo " [3]  Exploitation Tools";
+	#echo " [4]  Wireless Attacks";
+	#echo " [5]  Forensics Tools";
+	#echo " [6]  Web Applications";
+	#echo " [7]  Stress Testing";
+	#echo " [8]  Sniffing & Spoofing";
+	#echo " [9]  Password Attacks";
+	#echo " [10] Maintaining Access";
+	#echo " [11] Hardware Hacking";
+	#echo " [12] Reverse Engineering";
+	#echo " [13] Reporting Tools";
 
-	echo " [0]  Back";
+	printf "  [x]$blue  Manage Scripts\n$stop"
+	printf "  [0]$red  Back\n$stop\n";
 }
 
-sub_int_menu() {
-	# int menu 
-	echo "  [1] Install\Update Script";
-	echo "  [2] Run Script";
-	echo "  [0] Back";
+function weeman() {
+	git clone https://github.com/evait-security/weeman.git $def_loc
 }
 
 function main() {
+	# main calling(all primary options) method 
 
-	## need to create separate bash file for script 
-	
 	echo; # extra echo
 	local a; 
-	print_ok=" no functinality has been added here "
 
 	while [ "$a" != "0" ]; do {
+
+		printf "$deep_green" && printf "scripts manager : $red$script_version$stop\n"
 		main_menu
-		echo; echo -n "`cat $shell_style`" && read a; echo; 
+		echo -n "`cat $shell_style`" && read a; echo;
 
-		if [[ $a == 1 ]]; then {
-			# weeman 
-			local weeman;
-			
-			while [ "$weeman" != "0" ]; do {
-				sub_int_menu
+		if   [[ $a == 1 ]];   then echo ok ; pause
+		elif [[ $a == 2 ]];   then echo ok
+		elif [[ $a == 3 ]];   then echo ok
+		elif [[ $a == 4 ]];   then echo ok
+		elif [[ $a == 5 ]];   then echo ok
+		elif [[ $a == 6 ]];   then echo ok
+		elif [[ $a == 7 ]];   then echo ok
+		elif [[ $a == 8 ]];   then echo ok
+		elif [[ $a == 9 ]];   then echo ok
+		elif [[ $a == 10 ]];  then echo ok
+		elif [[ $a == 11 ]];  then echo ok
+		elif [[ $a == 12 ]];  then echo ok
+		elif [[ $a == 'x' ]]; then echo ok
+		elif [[ $a == 'q' || $a == 'exit' || $a == 'quit' || $a == 'quit()' || $a == 0  ]]; then exit 0;
+		else echo "Invalid Options" && echo; fi
 
-				# need to add inpput finction perameter 
-				echo; echo -n "`cat $shell_style`" && read weeman; echo; 
+	} done 
 
-				if [[ $weeman == 1 ]]; then {
-					echo $print_ok; echo 
-
-				} elif [[ $weeman == 2 ]]; then {
-					echo $print_ok; echo 
-
-				} fi
-
-			} done 
-
-		} elif [[ $a == 2 ]]; then {
-			# hakku 
-
-			local hakku;
-			
-			while [ "$hakku" != "0" ]; do {
-
-				printf "$red$blink"
-				printf "Note\nYou need root access for this framework\n\n$stop";
-
-				sub_int_menu
-				# need to add inpput finction perameter 
-				echo; echo -n "`cat $shell_style`" && read hakku; echo; 
-
-				if [[ $hakku == 1 ]]; then {
-					echo $print_ok; echo 
-
-				} elif [[ $hakku == 2 ]]; then {
-					echo $print_ok; echo 
-
-				} fi
-
-			} done 
-			
-		} elif [[ $a == 3 ]]; then {
-			# aircrack
-
-			local aircrack;
-			
-			while [ "$aircrack" != "0" ]; do {
-
-				printf "$red$blink"
-				printf "Note\nYou need root access for this framework\n\n$stop";
-				sub_int_menu
-
-				# need to add inpput finction perameter 
-				echo; echo -n "`cat $shell_style`" && read aircrack; echo; 
-
-				if [[ $aircrack == 1 ]]; then {
-					echo $print_ok; echo 
-
-				} elif [[ $aircrack == 2 ]]; then {
-					echo $print_ok; echo 
-
-				} fi
-
-			} done 
-
-		} else echo "Invalid Options" && echo; fi
-
-	} done
-
-	# end of scripts function
 }
 
+
+# main
+
 main
+printf "\nCurrently its on development\n\n" 
+pause

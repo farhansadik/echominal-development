@@ -1,6 +1,35 @@
 # Kali Linux Tools List 
 
-## Kali Menu 
+**Proposed And Tested Tools Termux**
+1. bash2mp4 (https://github.com/htr-tech/bash2mp4)
+
+   > Video/MP3 Downloader
+
+2. nmap (`pkg install curl nmap`)
+
+3. Tool-X (https://github.com/rajkumardusad/Tool-X)
+
+   >  370 Tools Installer 
+
+4. Zphisher (https://github.com/htr-tech/zphisher)
+
+   > Phishing Tools
+
+5. ShortUrl https://github.com/htr-tech/shorturl
+
+6. wkhtmltopdf/wkhtmltojpg
+
+7. A virus generator (https://github.com/ZechBron/zVirus-Gen) -- need some work!
+
+8. metasploit ()
+
+9. weeman 
+
+10. hakku-framework
+
+11. Aircrack-ng (root-repo aircrack-ng)
+
+**Kali Menu **
 1 - Information Gathering <br>
 2 - Vulnerability Analysis <br>
 3 - Exploitation Tools <br>
@@ -106,5 +135,4 @@ Source
 
 **Metasploit**
  - https://github.com/gushmazuko/metasploit_in_termux
-
 

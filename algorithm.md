@@ -2,6 +2,14 @@
 ### Environment Setup
 **Desktop-Linux**
 `.config/echominal` in `$HOME` required for shell config!
+
+> Everything will be placed in $HOME/.config/echominal
+
+**Environment for Test**
+
+1. `cat: $HOME/.config/echominal/shell_style.cfg: No such file or directory`
+2. `$HOME/.config/echominal/tools/` - dir
+
 **Android-Termux**
 `.config/echominal` required for shell config!
 `/sdcard/MP3` required for youtube-dl package

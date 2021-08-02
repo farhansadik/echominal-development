@@ -1,15 +1,15 @@
 #!/usr/bin/env bash
 #!/data/data/com.termux/files/usr/bin/bash 
 
-script_version="0.1.05"  # Alpha (pre 0.1.03 Alpha)
+script_version="0.1.06"  # Alpha (pre 0.1.03 Alpha)
 
 # Define variables
 red='\033[1;91m'; deep_green='\033[0;32m'; green='\033[1;92m'; yellow='\033[1;93m'; blue='\033[1;94m'; white='\033[1;97m'; 
 stop='\e[0m'; blink='\e[5m';
 
-def_loc=~/.config/echominal/tools/; 													# default clone location
+def_loc=~/.config/echominal/scripts/; 											# default clone location
 log=~/.config/echominal/log/system-status.log; 									# for running log  // not used 
-scripts_installation_log=~/.config/echominal/log/scripts_installation.log;		# not used 	
+existence=~/.config/echominal/log/check_existence.log;		# not used 	
 shell_style=~/.config/echominal/shell_style.cfg;
 
 function pause(){
@@ -56,8 +56,35 @@ main_menu() {
 	printf "  [0]$red  Back\n$stop\n";
 }
 
+function check_existence() {
+
+	echo false > $existence # by default
+	
+	if [[ `ls -a $def_loc | grep ^$1` == $1 ]]; then {
+		echo " [*] checking for $1"
+		echo " [*] checked"
+		echo true > $existence
+	}
+	else {
+		echo "No directory or file has been found!";
+		echo "need to install!"
+		echo false > $existence
+	} fi
+
+}
+
+function check_existence_boolean() {
+
+}
+
 function weeman() {
-	git clone https://github.com/evait-security/weeman.git $def_loc
+	ver=false
+	dir="weeman"
+
+	check_existence $dir
+
+	#git clone https://github.com/evait-security/weeman.git $def_loc
+
 }
 
 function main() {
@@ -72,7 +99,7 @@ function main() {
 		main_menu
 		echo -n "`cat $shell_style`" && read a; echo;
 
-		if   [[ $a == 1 ]];   then echo ok ; pause
+		if   [[ $a == 1 ]];   then weeman ; pause
 		elif [[ $a == 2 ]];   then echo ok
 		elif [[ $a == 3 ]];   then echo ok
 		elif [[ $a == 4 ]];   then echo ok

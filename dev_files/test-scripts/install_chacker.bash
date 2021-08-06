@@ -1,23 +1,33 @@
 #!/bin/bash 
 
-file=i.txt
-package_name='screenfetch'
-dir='javascript'
+dir='javascriptA'
+log=$HOME/.config/echominal/log/bool.txt
 
-boolean=false # default 
 
-function third_party_package_check() {
-	if [[ `ls -a | grep ^$dir` == $dir ]]; then {
+## THIS IS FINAL 
 
-		echo "File Is ready"
+function check() {
+	if [[ `ls -a | grep ^$1` == $1 ]]; then {
 
-		# echo true > $file;
+		echo "File Located : $1"
+		echo true > $log;
 	}
 	else {
 		echo "No directory or file has been found!";
-		# echo false > $file
+		echo false > $log
 	} fi
 }
 
+function bool() {
+	if [[ `cat $log` == 'true' ]]; then {
+		echo this is a TRUE 
+	} elif [[ `cat $log` == 'false' ]]; then {
+		echo this is a FALSE 
+	} else echo NULL; fi 
+}
+
 echo "[*] Checking existence...."
-third_party_package_check
+check $dir 
+
+echo "[*] calling bool method "
+bool

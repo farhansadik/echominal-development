@@ -1,10 +1,11 @@
 #!/bin/bash 
 
-dir='javascriptA'
+dir='javascript'
 log=$HOME/.config/echominal/log/bool.txt
 
 
 ## THIS IS FINAL 
+## v0.89
 
 function check() {
 	if [[ `ls -a | grep ^$1` == $1 ]]; then {
@@ -19,15 +20,20 @@ function check() {
 }
 
 function bool() {
-	if [[ `cat $log` == 'true' ]]; then {
+	if [[ $@ == 'true' ]]; then {
 		echo this is a TRUE 
-	} elif [[ `cat $log` == 'false' ]]; then {
+	} 
+	elif [[ $@ == 'false' ]]; then {
 		echo this is a FALSE 
-	} else echo NULL; fi 
+	} 
+	else echo NULL; fi 
 }
+
+echo false > $log
 
 echo "[*] Checking existence...."
 check $dir 
 
 echo "[*] calling bool method "
-bool
+com=`cat $log`;
+bool $com

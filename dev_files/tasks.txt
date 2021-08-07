@@ -2,19 +2,19 @@
 Basic Info
 --------------------------------------
 Branch Name : Development 
-Current Ver : 1.0.9 Lua (Stable)
-New Dev Ver : 2.0 (Batasu-Development Release) (Alpha)
+Current Ver : 2.0 (Batasu-Development Release) (Alpha)
+New Dev Ver : 2.1 Batasu (Beta)
 
 --------------------------------------
 Tasks To-Do
 --------------------------------------
 [done] *. Remove CCLI. 
-[done] 		* update ccli, add different alies. 
-*. Full VS minimal installation
-	* add basic and more package in installation process
+[done] *. update ccli, add different alies. 
+[done] *. Full VS minimal installation
+[done] *. add basic and more package in installation process
 *. Try to add dialog in installation or dialog based script
-*. Create a new uninstaller / or a reset state
-*. update the update process
+[done] *. Create a new uninstaller / or a reset state
+[done] *. update the update process
 [done] *. remove zipc and isoc sript and its doc files from github
 *. python script implementation
 [done] *. Add separate package manager - options will be like - 
@@ -24,10 +24,10 @@ Tasks To-Do
 [done]		* remove package 
 [done] *. add `termux-api` package on installation
 *. su/root package installation as separate 
-*. Separate every operation like arch in installation. Then perform the installation, 
-    see how it works. Based on the report/output create full and minimal installation. 
-    And create a nice output process.
-*. whats new options for test. device will receive updates through git
+[done] *. Separate every operation like arch in installation. Then perform the installation, 
+		  see how it works. Based on the report/output create full and minimal installation. 
+		  And create a nice output process.
+[done] *. whats new options for test. device will receive updates through git
 [done] *. use loop in every sub options 
 [done] *. remove * from menu options instead use 0
 [done] *. need to add more info about `termux-info`
@@ -37,6 +37,7 @@ Tasks To-Do
 
 *. add aircrack-ng manual at wiki
 *. add nmap wifi connectivity list mannual
+*. wiki for weeman script 
 *. nmap manual - https://www.learntermux.tech/2020/10/Install-Use-Nmap-Termux.html 
 *. need a manual for youtube-dl
 *. need a manual for ranger [file manager]

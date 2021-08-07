@@ -25,7 +25,7 @@
 
 9. weeman 
 
-10. hakku-framework
+10. hakku-framework [https://github.com/4shadoww/hakkuframework] 
 
 11. Aircrack-ng (root-repo aircrack-ng)
 

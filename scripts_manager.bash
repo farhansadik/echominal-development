@@ -1,15 +1,16 @@
 #!/usr/bin/env bash
 #!/data/data/com.termux/files/usr/bin/bash 
 
-script_version="0.1.06"  # Alpha (pre 0.1.03 Alpha)
+script_version="0.1.19"  # Alpha (pre 0.1.03 Alpha)
 
 # Define variables
 red='\033[1;91m'; deep_green='\033[0;32m'; green='\033[1;92m'; yellow='\033[1;93m'; blue='\033[1;94m'; white='\033[1;97m'; 
 stop='\e[0m'; blink='\e[5m';
 
-def_loc=~/.config/echominal/scripts/; 											# default clone location
-log=~/.config/echominal/log/system-status.log; 									# for running log  // not used 
-existence=~/.config/echominal/log/check_existence.log;		# not used 	
+def_loc=~/.config/echominal/scripts; 											# default loc for scripts // used 
+log=~/.config/echominal/log/system-status.log; 									# for running log  		  // not used 
+existence=~/.config/echominal/log/bool.log;										# to store boolean 	   	  // used 
+bool=`cat $existence`															# failed to work		  // not used 
 shell_style=~/.config/echominal/shell_style.cfg;
 
 function pause(){
@@ -56,38 +57,116 @@ main_menu() {
 	printf "  [0]$red  Back\n$stop\n";
 }
 
-function check_existence() {
+function check_existence_file() {
 
+	# echo " [*] by default FALSE"
 	echo false > $existence # by default
 	
 	if [[ `ls -a $def_loc | grep ^$1` == $1 ]]; then {
 		echo " [*] checking for $1"
-		echo " [*] checked"
+		echo " [*] found $1"
 		echo true > $existence
 	}
 	else {
-		echo "No directory or file has been found!";
-		echo "need to install!"
+		echo " [*] No directory or file has been found!";
+		echo " [*] Need to install!"
 		echo false > $existence
 	} fi
 
 }
 
-function check_existence_boolean() {
+function boolean() {
 
+	# TEMPORARY 
+	# CURRENTLY NOT IN SERVICE 
+
+	if [[ $1 == 'true' ]]; then {
+		echo this is a TRUE 
+	} 
+	elif [[ $1 == 'false' ]]; then {
+		echo this is a FALSE 
+	} 
+	else echo NULL; fi 
 }
 
 function weeman() {
-	ver=false
-	dir="weeman"
+	
+	# for dir/files 
+	if check_existence_file "weeman"; then {
 
-	check_existence $dir
+		if [[ `cat $existence` == 'true' ]]; then {
 
-	#git clone https://github.com/evait-security/weeman.git $def_loc
+			echo " [*] ready to run weeman "
+			if cd $def_loc/weeman; then python weeman.py; fi 
+
+		} 
+
+		elif [[ `cat $existence` == 'false' ]]; then {
+
+			echo " [*] Sorry Weeman not found in your system!"; echo
+			read -p "You want to install weeman [y/n] " install_weeman 
+
+			if [[ $install_weeman == 'y' ]]; then {
+				git clone https://github.com/evait-security/weeman.git $def_loc/weeman		
+				if cd $def_loc/weeman; then python weeman.py; fi 
+			}
+
+			elif [[ $install_weeman == 'n' ]]; then {
+				pause
+			} fi 
+
+		} fi 
+
+	} fi 
+
+	echo 
+}
+
+function hakku_framework() {
+
+	# root access message required 
+
+	# for dir/files 
+	if check_existence_file "hakkuframework"; then {
+
+		if [[ `cat $existence` == 'true' ]]; then {
+
+			echo " [*] ready to run hakkuframework "
+			# if cd $def_loc/weeman; then python weeman.py; fi 
+
+		} 
+
+		elif [[ `cat $existence` == 'false' ]]; then {
+
+			echo " [*] Sorry hakkuframework not found in your system!"; echo
+			read -p "You want to install hakkuframework [y/n] " install_hakkuframework
+
+			if [[ $install_hakkuframework == 'y' ]]; then {
+				git clone https://github.com/4shadoww/hakkuframework $def_loc/hakkuframework
+				#if cd $def_loc/weeman; then python weeman.py; fi 
+			} 
+
+			elif [[ $install_hakkuframework == 'n' ]]; then {
+				pause
+			} fi 
+
+		} fi 
+
+	} fi 
+
+	echo 
 
 }
 
-function main() {
+function aircrack_ng() {
+	sleep 0.5
+}
+
+function nmap() {
+	sleep 0.5
+}
+
+main() {
 	# main calling(all primary options) method 
 
 	echo; # extra echo
@@ -100,18 +179,18 @@ function main() {
 		echo -n "`cat $shell_style`" && read a; echo;
 
 		if   [[ $a == 1 ]];   then weeman ; pause
-		elif [[ $a == 2 ]];   then echo ok
-		elif [[ $a == 3 ]];   then echo ok
-		elif [[ $a == 4 ]];   then echo ok
-		elif [[ $a == 5 ]];   then echo ok
-		elif [[ $a == 6 ]];   then echo ok
-		elif [[ $a == 7 ]];   then echo ok
-		elif [[ $a == 8 ]];   then echo ok
-		elif [[ $a == 9 ]];   then echo ok
-		elif [[ $a == 10 ]];  then echo ok
-		elif [[ $a == 11 ]];  then echo ok
-		elif [[ $a == 12 ]];  then echo ok
-		elif [[ $a == 'x' ]]; then echo ok
+		elif [[ $a == 2 ]];   then hakku_framework; pause # hakku framework  
+		elif [[ $a == 3 ]];   then echo ok; pause # aircrack-ng 
+		elif [[ $a == 4 ]];   then echo ok; pause # nmap 
+		elif [[ $a == 5 ]];   then echo ok; pause 
+		elif [[ $a == 6 ]];   then echo ok; pause 
+		elif [[ $a == 7 ]];   then echo ok; pause 
+		elif [[ $a == 8 ]];   then echo ok; pause 
+		elif [[ $a == 9 ]];   then echo ok; pause 
+		elif [[ $a == 10 ]];  then echo ok; pause 
+		elif [[ $a == 11 ]];  then echo ok; pause 
+		elif [[ $a == 12 ]];  then echo ok; pause 
+		elif [[ $a == 'x' ]]; then echo ok; pause 
 		elif [[ $a == 'q' || $a == 'exit' || $a == 'quit' || $a == 'quit()' || $a == 0  ]]; then exit 0;
 		else echo "Invalid Options" && echo; fi
 
@@ -123,5 +202,4 @@ function main() {
 # main
 
 main
-printf "\nCurrently its on development\n\n" 
 pause

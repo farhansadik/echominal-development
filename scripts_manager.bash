@@ -218,10 +218,10 @@ function aircrack_ng() {
 
 function nmap() {
 
-	package="nmap"
+	package="nmap-ncat"
 
 	# for dir/files 
-	if check_existence_package "nmap"; then {
+	if check_existence_package $package; then {
 
 		if [[ `cat $existence` == 'true' ]]; then {
 			echo " [*] ready to run $package"

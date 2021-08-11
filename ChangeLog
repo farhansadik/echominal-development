@@ -18,9 +18,10 @@ Version 2.1 (Batasu) August-2021:
 	* Script Manager [0.1.25] - aircrack-ng fix [1]
 	* Script Manager [0.1.26] - aircrack-ng fix [2]
 	* Script Manager [0.1.27] - nmap deployed for test
-	* Script Manager [0.1.27] - fix for nmap [1]
-	* Script Manager [0.1.28] - fix for nmap [2]
+	* Script Manager [0.1.28] - fix for nmap [1]
+	* Script Manager [0.1.29] - fix for nmap [2]
 	* Script Manager [0.1.30] - added zphisher 
+	* Script Manager [0.1.31] - added shorturl 
 	
 Version 2.0 (Batasu) July-2021:
 	* Separated script function from main script

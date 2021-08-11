@@ -1,7 +1,7 @@
 #!/data/data/com.termux/files/usr/bin/bash 
 #!/usr/bin/env bash
 
-script_version="0.1.30"  # Alpha (pre 0.1.03 Alpha)
+script_version="0.1.31"  # Alpha (pre 0.1.03 Alpha)
 
 # Define variables
 red='\033[1;91m'; deep_green='\033[0;32m'; green='\033[1;92m'; yellow='\033[1;93m'; blue='\033[1;94m'; white='\033[1;97m'; 
@@ -24,19 +24,18 @@ function pause(){
 main_menu() {
 	# main menu 
 
-	printf "\n  [1]  Weeman [non-root]\n"; 		# dir 
-	echo "  [2]  Hakku Framework [root]"; 	# dir 
-	echo "  [3]  Aircrack-ng [root]"; 		# package 
-	echo "  [4]  Nmap";  			# package 
-	echo "  [5]  Tool-X [useless]";			# dir 
-	echo "  [6]  Zphisher ";		# dir 
-	echo "  [7]  ShortUrl [on-test]";		# dir 
-	echo "  [8]  wkhtmltopdf [on-test]";	# custom install (dir)
-	echo "  [9]  wkhtmltojpg [on-test]";    # custom install (dir)
-	echo "  [10] zVirus-Gen [on-test]";		# dir 
-	echo "  [11] bash2mp4 [on-test]";		# dir 
-	echo "  [12] metasploit [on-test]";		# not found 
-	#echo "  [13] Aircrack [on-test]";
+	printf "\n  [1]  Weeman\n"; 						# dir 
+	printf "  [2]  Hakku Framework$red [root]$stop\n"; 	# dir 
+	printf "  [3]  Aircrack-ng$red [root]$stop\n"; 		# package 
+	printf "  [4]  Nmap\n";  							# package 
+	printf "  [5]  Tool-X$yellow [useless]$stop\n";		# dir 
+	printf "  [6]  Zphisher \n";						# dir  
+	printf "  [7]  ShortUrl [on-test]";		# dir 
+	#printf "  [8]  wkhtmltopdf [on-test]";	# custom install (dir)
+	#printf "  [9]  wkhtmltojpg [on-test]";    # custom install (dir)
+	#printf "  [10] zVirus-Gen [on-test]";		# dir 
+	#printf "  [11] bash2mp4 [on-test]";		# dir 
+	#printf "  [12] metasploit [on-test]";		# not found 
 
 	# previous menu 
 	#echo " [1]  Information Gathering ";
@@ -54,7 +53,8 @@ main_menu() {
 	#echo " [13] Reporting Tools";
 
 	printf "  [x]$blue  Manage Scripts\n$stop"
-	printf "  [0]$red  Back\n$stop\n";
+	printf "  [0]  Back\n";
+	echo 
 }
 
 function check_existence_package() {
@@ -261,9 +261,8 @@ function tool_x() {
 }
 
 function zphisher() {
-	# git clone git://github.com/htr-tech/zphisher.git
-	# cd zphisher
-	# bash zphisher.sh
+
+	# OK 
 
 	package="zphisher"
 
@@ -294,6 +293,44 @@ function zphisher() {
 	echo && pause 
 }
 
+function shorturl() {
+	# git clone https://github.com/htr-tech/shorturl.git
+	# cd shorturl
+	# bash setup.sh
+	
+	# ON TEST 
+	
+	package="shorturl"
+	
+	# for dir/files 
+	if check_existence_file $package; then {
+
+		if [[ `cat $existence` == 'true' ]]; then {
+			echo " [*] ready to run $package "
+			if cd $def_loc/$package; then ShortUrl; fi 
+		} 
+		elif [[ `cat $existence` == 'false' ]]; then {
+
+			echo " [*] Sorry $package not found in your system!"; echo
+			read -p "You want to install $package [y/n] " install
+
+			if [[ $install == 'y' ]]; then {
+				git clone https://github.com/htr-tech/shorturl.git $def_loc/$package
+				if cd $def_loc/$package; then bash setup.sh; fi
+				ShortUrl 
+			} 
+			elif [[ $install == 'n' ]]; then {
+				pause
+			} fi 
+
+		} fi 
+
+	} fi 
+
+	echo && pause 
+	
+}
+
 main() {
 	# main calling(all primary options) method 
 
@@ -312,7 +349,7 @@ main() {
 		elif [[ $a == 4 ]];   then nmap # nmap 
 		elif [[ $a == 5 ]];   then echo ok; pause # tool x useless tools 
 		elif [[ $a == 6 ]];   then zphisher # zphisher 
-		elif [[ $a == 7 ]];   then echo ok; pause 
+		elif [[ $a == 7 ]];   then shorturl  # short url 
 		elif [[ $a == 8 ]];   then echo ok; pause 
 		elif [[ $a == 9 ]];   then echo ok; pause 
 		elif [[ $a == 10 ]];  then echo ok; pause 

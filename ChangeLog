@@ -15,7 +15,8 @@ Version 2.1 (Batasu) August-2021:
 	* Script Manager [0.1.22] - hakku framework ready for test
 	* Script Manager [0.1.23] - hakku framework fix [1]
 	* Script Manager [0.1.24] - weeman and aircrack-ng fix [1]
-	* Script Manager [0.1.25] - aircrack-ng fix
+	* Script Manager [0.1.25] - aircrack-ng fix [1]
+	* Script Manager [0.1.26] - aircrack-ng fix [2]
 	
 Version 2.0 (Batasu) July-2021:
 	* Separated script function from main script

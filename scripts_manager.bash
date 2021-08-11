@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #!/data/data/com.termux/files/usr/bin/bash 
 
-script_version="0.1.25"  # Alpha (pre 0.1.03 Alpha)
+script_version="0.1.26"  # Alpha (pre 0.1.03 Alpha)
 
 # Define variables
 red='\033[1;91m'; deep_green='\033[0;32m'; green='\033[1;92m'; yellow='\033[1;93m'; blue='\033[1;94m'; white='\033[1;97m'; 
@@ -182,12 +182,10 @@ function aircrack_ng() {
 	if check_existence_package "aircrack-ng"; then {
 
 		if [[ `cat $existence` == 'true' ]]; then {
-
 			echo " [*] ready to run aircrack-ng"
 			echo " [*] aircrack-ng has been installed!"
-			sudo airmon-ng
-			# if cd $def_loc/weeman; then python weeman.py; fi 
-
+			echo " [*] run it manually"
+			# sudo airmon-ng
 		} 
 
 		elif [[ `cat $existence` == 'false' ]]; then {
@@ -202,8 +200,8 @@ function aircrack_ng() {
 				} fi 
 				echo " [*] ready to run aircrack-ng"
 				echo " [*] aircrack-ng has been installed!"
-				sudo airmon-ng
-				#if cd $def_loc/weeman; then python weeman.py; fi 
+				echo " [*] run it manually"
+				#sudo airmon-ng
 			} 
 
 			elif [[ $install == 'n' ]]; then {

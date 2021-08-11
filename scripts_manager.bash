@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #!/data/data/com.termux/files/usr/bin/bash 
 
-script_version="0.1.23"  # Alpha (pre 0.1.03 Alpha)
+script_version="0.1.24"  # Alpha (pre 0.1.03 Alpha)
 
 # Define variables
 red='\033[1;91m'; deep_green='\033[0;32m'; green='\033[1;92m'; yellow='\033[1;93m'; blue='\033[1;94m'; white='\033[1;97m'; 
@@ -118,7 +118,7 @@ function weeman() {
 		if [[ `cat $existence` == 'true' ]]; then {
 
 			echo " [*] ready to run weeman "
-			if cd $def_loc/weeman; then python weeman.py; fi 
+			if cd $def_loc/weeman; then python2 weeman.py; fi 
 
 		} 
 
@@ -129,7 +129,7 @@ function weeman() {
 
 			if [[ $install_weeman == 'y' ]]; then {
 				git clone https://github.com/evait-security/weeman.git $def_loc/weeman		
-				if cd $def_loc/weeman; then python weeman.py; fi 
+				if cd $def_loc/weeman; then python2 weeman.py; fi 
 			}
 
 			elif [[ $install_weeman == 'n' ]]; then {
@@ -230,7 +230,7 @@ main() {
 
 		if   [[ $a == 1 ]];   then weeman && pause
 		elif [[ $a == 2 ]];   then hakku_framework # hakku framework  
-		elif [[ $a == 3 ]];   then aircrack-ng # aircrack-ng 
+		elif [[ $a == 3 ]];   then aircrack_ng # aircrack-ng 
 		elif [[ $a == 4 ]];   then nmap && pause # nmap 
 		elif [[ $a == 5 ]];   then echo ok; pause 
 		elif [[ $a == 6 ]];   then echo ok; pause 

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #!/data/data/com.termux/files/usr/bin/bash 
 
-script_version="0.1.19"  # Alpha (pre 0.1.03 Alpha)
+script_version="0.1.21"  # Alpha (pre 0.1.03 Alpha)
 
 # Define variables
 red='\033[1;91m'; deep_green='\033[0;32m'; green='\033[1;92m'; yellow='\033[1;93m'; blue='\033[1;94m'; white='\033[1;97m'; 
@@ -55,6 +55,27 @@ main_menu() {
 
 	printf "  [x]$blue  Manage Scripts\n$stop"
 	printf "  [0]$red  Back\n$stop\n";
+}
+
+function check_existence_package() {
+
+	# echo " [*] by default FALSE"
+	echo false > $existence; # by default 
+	echo " [*] searching for package $1"
+	if [[ `dpkg --list | grep -o $1` == $1 ]]; then {
+		echo " [*] found $1"
+		echo true > $existence
+	}
+	elif [[ `dpkg --list | grep -o $1` != $1 ]]; then {
+		echo " [*] No packages has been found!";
+		echo " [*] Need to install!"
+		echo false > $existence
+	}
+	else {
+		echo " [*] Invalid Operation"
+		echo false > $existence
+	} 
+	fi 
 }
 
 function check_existence_file() {
@@ -125,6 +146,7 @@ function weeman() {
 function hakku_framework() {
 
 	# root access message required 
+	# INC0MPLEATE 
 
 	# for dir/files 
 	if check_existence_file "hakkuframework"; then {
@@ -154,12 +176,42 @@ function hakku_framework() {
 
 	} fi 
 
-	echo 
+	echo && pause 
 
 }
 
 function aircrack_ng() {
-	sleep 0.5
+
+	# for dir/files 
+	if check_existence_package "aircrack-ng"; then {
+
+		if [[ `cat $existence` == 'true' ]]; then {
+
+			echo " [*] ready to run aircrack-ng"
+			echo " [*] aircrack-ng has been installed!"
+			# if cd $def_loc/weeman; then python weeman.py; fi 
+
+		} 
+
+		elif [[ `cat $existence` == 'false' ]]; then {
+
+			echo " [*] Sorry aircrack-ng not found in your system!"; echo
+			read -p "You want to install aircrack-ng [y/n] " install
+
+			if [[ $install == 'y' ]]; then {
+				if pkg install root-repo; then pkg install aircrack-ng; fi 
+				#if cd $def_loc/weeman; then python weeman.py; fi 
+			} 
+
+			elif [[ $install == 'n' ]]; then {
+				pause
+			} fi 
+
+		} fi 
+
+	} fi 
+	
+	echo && pause 
 }
 
 function nmap() {
@@ -178,10 +230,10 @@ main() {
 		main_menu
 		echo -n "`cat $shell_style`" && read a; echo;
 
-		if   [[ $a == 1 ]];   then weeman ; pause
-		elif [[ $a == 2 ]];   then hakku_framework; pause # hakku framework  
-		elif [[ $a == 3 ]];   then echo ok; pause # aircrack-ng 
-		elif [[ $a == 4 ]];   then echo ok; pause # nmap 
+		if   [[ $a == 1 ]];   then weeman && pause
+		elif [[ $a == 2 ]];   then hakku_framework # hakku framework  
+		elif [[ $a == 3 ]];   then aircrack-ng # aircrack-ng 
+		elif [[ $a == 4 ]];   then nmap && pause # nmap 
 		elif [[ $a == 5 ]];   then echo ok; pause 
 		elif [[ $a == 6 ]];   then echo ok; pause 
 		elif [[ $a == 7 ]];   then echo ok; pause 

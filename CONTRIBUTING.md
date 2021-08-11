@@ -6,12 +6,16 @@ GIT Branching is the strategy or systematic procedure of creating the branch and
 
 ![tes](images/contributor_big.PNG)
 
-**Developer Workflow**
+### Permissions for Contributor
 
-1. Developer can deploy code to `development` branch. For testing purposes. 
-2. Developer must have to **review** every code before **merging**. 
+1. A **Contributor** can deploy code to `development` branch. For testing purposes. 
+2. **Contributor** can't merge/push their code to `master` branch.
+3. **Contributor** can create a pull request for project owner for review and merge. 
+4. **Contributor**  can create any branch and merge to `development` and deploy code for review. 
+5. Only **project owner** can merge code to `master` branch 
+6. **Project owner** must have to review everything before merging! 
 
-**Contributing Workflow**
+### Contributing Workflow
 
 > **Contributor can't merge/push their code to `master` branch.**
 
@@ -46,7 +50,8 @@ GIT Branching is the strategy or systematic procedure of creating the branch and
 
 5. Done!!
 
-
+    
 
 Thank You, <br>
 Farhan Sadik
+

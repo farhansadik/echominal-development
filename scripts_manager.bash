@@ -1,7 +1,7 @@
-#!/usr/bin/env bash
 #!/data/data/com.termux/files/usr/bin/bash 
+#!/usr/bin/env bash
 
-script_version="0.1.26"  # Alpha (pre 0.1.03 Alpha)
+script_version="0.1.27"  # Alpha (pre 0.1.03 Alpha)
 
 # Define variables
 red='\033[1;91m'; deep_green='\033[0;32m'; green='\033[1;92m'; yellow='\033[1;93m'; blue='\033[1;94m'; white='\033[1;97m'; 
@@ -145,8 +145,7 @@ function weeman() {
 
 function hakku_framework() {
 
-	# root access message required 
-	# INC0MPLEATE 
+	# root access message required
 
 	# for dir/files 
 	if check_existence_file "hakkuframework"; then {
@@ -177,6 +176,8 @@ function hakku_framework() {
 }
 
 function aircrack_ng() {
+
+	# root access message required 
 
 	# for dir/files 
 	if check_existence_package "aircrack-ng"; then {
@@ -216,7 +217,39 @@ function aircrack_ng() {
 }
 
 function nmap() {
-	sleep 0.5
+
+	package="nmap"
+
+	# for dir/files 
+	if check_existence_package $package; then {
+
+		if [[ `cat $existence` == 'true' ]]; then {
+			echo " [*] ready to run $package"
+			echo " [*] $package has been installed!"
+			echo " [*] run it manually"
+		} 
+
+		elif [[ `cat $existence` == 'false' ]]; then {
+
+			echo " [*] Sorry $package not found in your system!"; echo
+			read -p "You want to install $package [y/n] " install
+
+			if [[ $install == 'y' ]]; then {
+				pkg install nmap nmap-ncat
+				echo " [*] ready to run $package"
+				echo " [*] $package has been installed!"
+				echo " [*] run it manually"
+			} 
+
+			elif [[ $install == 'n' ]]; then {
+				pause
+			} fi 
+
+		} fi 
+
+	} fi 
+	
+	echo && pause 
 }
 
 main() {
@@ -234,7 +267,7 @@ main() {
 		if   [[ $a == 1 ]];   then weeman && pause
 		elif [[ $a == 2 ]];   then hakku_framework # hakku framework  
 		elif [[ $a == 3 ]];   then aircrack_ng # aircrack-ng 
-		elif [[ $a == 4 ]];   then nmap && pause # nmap 
+		elif [[ $a == 4 ]];   then nmap # nmap 
 		elif [[ $a == 5 ]];   then echo ok; pause 
 		elif [[ $a == 6 ]];   then echo ok; pause 
 		elif [[ $a == 7 ]];   then echo ok; pause 

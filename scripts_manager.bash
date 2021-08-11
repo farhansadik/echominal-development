@@ -311,7 +311,7 @@ main() {
 		elif [[ $a == 3 ]];   then aircrack_ng # aircrack-ng 
 		elif [[ $a == 4 ]];   then nmap # nmap 
 		elif [[ $a == 5 ]];   then echo ok; pause # tool x useless tools 
-		elif [[ $a == 6 ]];   zphisher # zphisher 
+		elif [[ $a == 6 ]];   then zphisher # zphisher 
 		elif [[ $a == 7 ]];   then echo ok; pause 
 		elif [[ $a == 8 ]];   then echo ok; pause 
 		elif [[ $a == 9 ]];   then echo ok; pause 

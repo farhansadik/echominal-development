@@ -281,7 +281,7 @@ function zphisher() {
 
 			if [[ $install == 'y' ]]; then {
 				git clone https://github.com/htr-tech/zphisher.git $def_loc/$package
-				if cd $def_loc/$package; then zphisher.sh; fi 
+				if cd $def_loc/$package; then bash zphisher.sh; fi 
 			} 
 			elif [[ $install == 'n' ]]; then {
 				pause

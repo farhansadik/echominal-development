@@ -29,7 +29,7 @@ main_menu() {
 	echo "  [3]  Aircrack-ng [root]"; 		# package 
 	echo "  [4]  Nmap";  			# package 
 	echo "  [5]  Tool-X [useless]";			# dir 
-	echo "  [6]  Zphisher [on-test]";		# dir 
+	echo "  [6]  Zphisher ";		# dir 
 	echo "  [7]  ShortUrl [on-test]";		# dir 
 	echo "  [8]  wkhtmltopdf [on-test]";	# custom install (dir)
 	echo "  [9]  wkhtmltojpg [on-test]";    # custom install (dir)

@@ -1,7 +1,7 @@
 #!/data/data/com.termux/files/usr/bin/bash 
 #!/usr/bin/env bash
 
-script_version="0.1.31"  # Alpha (pre 0.1.03 Alpha)
+script_version="0.1.33"  # Alpha (pre 0.1.03 Alpha)
 
 # Define variables
 red='\033[1;91m'; deep_green='\033[0;32m'; green='\033[1;92m'; yellow='\033[1;93m'; blue='\033[1;94m'; white='\033[1;97m'; 
@@ -28,14 +28,14 @@ main_menu() {
 	printf "  [2]  Hakku Framework$red [root]$stop\n"; 	# dir 
 	printf "  [3]  Aircrack-ng$red [root]$stop\n"; 		# package 
 	printf "  [4]  Nmap\n";  							# package 
-	printf "  [5]  Tool-X$yellow [useless]$stop\n";		# dir 
+	printf "  [5]  Tool-X$yellow [useless]$stop\n";		# dir                   // removed
 	printf "  [6]  Zphisher \n";						# dir  
-	printf "  [7]  ShortUrl [on-test]";		# dir 
-	#printf "  [8]  wkhtmltopdf [on-test]";	# custom install (dir)
-	#printf "  [9]  wkhtmltojpg [on-test]";    # custom install (dir)
-	#printf "  [10] zVirus-Gen [on-test]";		# dir 
-	#printf "  [11] bash2mp4 [on-test]";		# dir 
-	#printf "  [12] metasploit [on-test]";		# not found 
+	printf "  [7]  ShortUrl [on-test]\n";		        # dir 
+	#printf "  [8]  wkhtmltopdf [on-test]\n";	        # custom install (dir)  // removed 
+	#printf "  [9]  wkhtmltojpg [on-test]\n";           # custom install (dir)  // removed
+	printf "  [10] zVirus-Gen\n";		                # dir 
+	printf "  [11] bash2mp4 [on-test]\n";		# dir 
+	#printf "  [12] metasploit [on-test]\n";		# not found 
 
 	# previous menu 
 	#echo " [1]  Information Gathering ";
@@ -294,11 +294,8 @@ function zphisher() {
 }
 
 function shorturl() {
-	# git clone https://github.com/htr-tech/shorturl.git
-	# cd shorturl
-	# bash setup.sh
-	
-	# ON TEST 
+
+	# OK
 	
 	package="shorturl"
 	
@@ -331,6 +328,81 @@ function shorturl() {
 	
 }
 
+function zvirus_gen() {
+    # git clone https://github.com/ZechBron/zVirus-Gen
+    # cd zVirus-Gen
+    # chmod +x setup.sh
+    # ./setup.sh
+    
+    # OK
+	
+	package="zVirus-Gen"
+	
+	# for dir/files 
+	if check_existence_file $package; then {
+
+		if [[ `cat $existence` == 'true' ]]; then {
+			echo " [*] ready to run $package "
+			if cd $def_loc/$package; then bash zVirus; fi 
+		} 
+		elif [[ `cat $existence` == 'false' ]]; then {
+
+			echo " [*] Sorry $package not found in your system!"; echo
+			read -p "You want to install $package [y/n] " install
+
+			if [[ $install == 'y' ]]; then {
+				git clone https://github.com/ZechBron/zVirus-Gen $def_loc/$package
+				if cd $def_loc/$package; then bash setup.sh; fi
+				bash zVirus 
+			} 
+			elif [[ $install == 'n' ]]; then {
+				pause
+			} fi 
+
+		} fi 
+
+	} fi 
+
+	echo && pause 
+    
+}
+
+function bashtompfour() {
+	# git clone https://github.com/htr-tech/bash2mp4
+	# cd bash2mp4
+	# bash setup.sh
+	
+	package="bash2mp4"
+	
+	# for dir/files 
+	if check_existence_file $package; then {
+
+		if [[ `cat $existence` == 'true' ]]; then {
+			echo " [*] ready to run $package "
+			if cd $def_loc/$package; then bash b2mp4; fi 
+		} 
+		elif [[ `cat $existence` == 'false' ]]; then {
+
+			echo " [*] Sorry $package not found in your system!"; echo
+			read -p "You want to install $package [y/n] " install
+
+			if [[ $install == 'y' ]]; then {
+				git clone https://github.com/htr-tech/bash2mp4 $def_loc/$package
+				if cd $def_loc/$package; then bash setup.sh; fi
+				bash b4mp4 
+			} 
+			elif [[ $install == 'n' ]]; then {
+				pause
+			} fi 
+
+		} fi 
+
+	} fi 
+
+	echo && pause 
+	
+}
+
 main() {
 	# main calling(all primary options) method 
 
@@ -344,16 +416,16 @@ main() {
 		echo -n "`cat $shell_style`" && read a; echo;
 
 		if   [[ $a == 1 ]];   then weeman && pause
-		elif [[ $a == 2 ]];   then hakku_framework # hakku framework  
-		elif [[ $a == 3 ]];   then aircrack_ng # aircrack-ng 
-		elif [[ $a == 4 ]];   then nmap # nmap 
-		elif [[ $a == 5 ]];   then echo ok; pause # tool x useless tools 
-		elif [[ $a == 6 ]];   then zphisher # zphisher 
-		elif [[ $a == 7 ]];   then shorturl  # short url 
-		elif [[ $a == 8 ]];   then echo ok; pause 
-		elif [[ $a == 9 ]];   then echo ok; pause 
-		elif [[ $a == 10 ]];  then echo ok; pause 
-		elif [[ $a == 11 ]];  then echo ok; pause 
+		elif [[ $a == 2 ]];   then hakku_framework 		# hakku framework  
+		elif [[ $a == 3 ]];   then aircrack_ng 			# aircrack-ng 
+		elif [[ $a == 4 ]];   then nmap 				# nmap 
+		elif [[ $a == 5 ]];   then echo ok; pause 		# removed 
+		elif [[ $a == 6 ]];   then zphisher 			# zphisher 
+		elif [[ $a == 7 ]];   then shorturl  			# short url 
+		elif [[ $a == 8 ]];   then echo ok; pause		# removed  
+		elif [[ $a == 9 ]];   then echo ok; pause 		# removed 
+		elif [[ $a == 10 ]];  then zvirus_gen 			# zvirus gen 
+		elif [[ $a == 11 ]];  then bashtompfour         # bash 2 mp4
 		elif [[ $a == 12 ]];  then echo ok; pause 
 		elif [[ $a == 'x' ]]; then echo ok; pause 
 		elif [[ $a == 'q' || $a == 'exit' || $a == 'quit' || $a == 'quit()' || $a == 0  ]]; then exit 0;

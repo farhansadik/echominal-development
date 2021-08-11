@@ -1,7 +1,7 @@
 #!/data/data/com.termux/files/usr/bin/bash 
 #!/usr/bin/env bash
 
-script_version="0.1.28"  # Alpha (pre 0.1.03 Alpha)
+script_version="0.1.30"  # Alpha (pre 0.1.03 Alpha)
 
 # Define variables
 red='\033[1;91m'; deep_green='\033[0;32m'; green='\033[1;92m'; yellow='\033[1;93m'; blue='\033[1;94m'; white='\033[1;97m'; 
@@ -27,8 +27,8 @@ main_menu() {
 	printf "\n  [1]  Weeman [non-root]\n"; 		# dir 
 	echo "  [2]  Hakku Framework [root]"; 	# dir 
 	echo "  [3]  Aircrack-ng [root]"; 		# package 
-	echo "  [4]  Nmap [on-test]";  			# package 
-	echo "  [5]  Tool-X [on-test]";			# dir 
+	echo "  [4]  Nmap";  			# package 
+	echo "  [5]  Tool-X [useless]";			# dir 
 	echo "  [6]  Zphisher [on-test]";		# dir 
 	echo "  [7]  ShortUrl [on-test]";		# dir 
 	echo "  [8]  wkhtmltopdf [on-test]";	# custom install (dir)
@@ -111,6 +111,8 @@ function boolean() {
 }
 
 function weeman() {
+
+	# ok 
 	
 	# for dir/files 
 	if check_existence_file "weeman"; then {
@@ -183,7 +185,6 @@ function aircrack_ng() {
 	if check_existence_package "aircrack-ng"; then {
 
 		if [[ `cat $existence` == 'true' ]]; then {
-			echo " [*] ready to run aircrack-ng"
 			echo " [*] aircrack-ng has been installed!"
 			echo " [*] run it manually"
 			# sudo airmon-ng
@@ -199,7 +200,6 @@ function aircrack_ng() {
 				if pkg install root-repo tsu; then {
 					pkg install aircrack-ng
 				} fi 
-				echo " [*] ready to run aircrack-ng"
 				echo " [*] aircrack-ng has been installed!"
 				echo " [*] run it manually"
 				#sudo airmon-ng
@@ -217,6 +217,8 @@ function aircrack_ng() {
 }
 
 function nmap() {
+
+	# ok 
 
 	package="nmap-ncat"
 
@@ -252,6 +254,46 @@ function nmap() {
 	echo && pause 
 }
 
+function tool_x() {
+	sleep 0.5 
+	# git clone https://github.com/rajkumardusad/Tool-X.git
+	# useless project 
+}
+
+function zphisher() {
+	# git clone git://github.com/htr-tech/zphisher.git
+	# cd zphisher
+	# bash zphisher.sh
+
+	package="zphisher"
+
+	# for dir/files 
+	if check_existence_file $package; then {
+
+		if [[ `cat $existence` == 'true' ]]; then {
+			echo " [*] ready to run $package "
+			if cd $def_loc/$package; then bash zphisher.sh; fi 
+		} 
+		elif [[ `cat $existence` == 'false' ]]; then {
+
+			echo " [*] Sorry $package not found in your system!"; echo
+			read -p "You want to install $package [y/n] " install
+
+			if [[ $install == 'y' ]]; then {
+				git clone https://github.com/htr-tech/zphisher.git $def_loc/$package
+				if cd $def_loc/$package; then zphisher.sh; fi 
+			} 
+			elif [[ $install == 'n' ]]; then {
+				pause
+			} fi 
+
+		} fi 
+
+	} fi 
+
+	echo && pause 
+}
+
 main() {
 	# main calling(all primary options) method 
 
@@ -268,8 +310,8 @@ main() {
 		elif [[ $a == 2 ]];   then hakku_framework # hakku framework  
 		elif [[ $a == 3 ]];   then aircrack_ng # aircrack-ng 
 		elif [[ $a == 4 ]];   then nmap # nmap 
-		elif [[ $a == 5 ]];   then echo ok; pause 
-		elif [[ $a == 6 ]];   then echo ok; pause 
+		elif [[ $a == 5 ]];   then echo ok; pause # tool x useless tools 
+		elif [[ $a == 6 ]];   zphisher # zphisher 
 		elif [[ $a == 7 ]];   then echo ok; pause 
 		elif [[ $a == 8 ]];   then echo ok; pause 
 		elif [[ $a == 9 ]];   then echo ok; pause 

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #!/data/data/com.termux/files/usr/bin/bash 
 
-script_version="0.1.21"  # Alpha (pre 0.1.03 Alpha)
+script_version="0.1.22"  # Alpha (pre 0.1.03 Alpha)
 
 # Define variables
 red='\033[1;91m'; deep_green='\033[0;32m'; green='\033[1;92m'; yellow='\033[1;93m'; blue='\033[1;94m'; white='\033[1;97m'; 
@@ -152,12 +152,9 @@ function hakku_framework() {
 	if check_existence_file "hakkuframework"; then {
 
 		if [[ `cat $existence` == 'true' ]]; then {
-
 			echo " [*] ready to run hakkuframework "
-			# if cd $def_loc/weeman; then python weeman.py; fi 
-
+			if cd $def_loc/hakkuframework; then python hakku.py; fi 
 		} 
-
 		elif [[ `cat $existence` == 'false' ]]; then {
 
 			echo " [*] Sorry hakkuframework not found in your system!"; echo
@@ -165,9 +162,8 @@ function hakku_framework() {
 
 			if [[ $install_hakkuframework == 'y' ]]; then {
 				git clone https://github.com/4shadoww/hakkuframework $def_loc/hakkuframework
-				#if cd $def_loc/weeman; then python weeman.py; fi 
+				if cd $def_loc/hakkuframework; then python hakku.py; fi 
 			} 
-
 			elif [[ $install_hakkuframework == 'n' ]]; then {
 				pause
 			} fi 
@@ -200,6 +196,8 @@ function aircrack_ng() {
 
 			if [[ $install == 'y' ]]; then {
 				if pkg install root-repo; then pkg install aircrack-ng; fi 
+				echo " [*] ready to run aircrack-ng"
+				echo " [*] aircrack-ng has been installed!"
 				#if cd $def_loc/weeman; then python weeman.py; fi 
 			} 
 

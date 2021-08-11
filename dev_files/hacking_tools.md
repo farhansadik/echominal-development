@@ -7,7 +7,7 @@
 
 2. nmap (`pkg install curl nmap`)
 
-3. Tool-X (https://github.com/rajkumardusad/Tool-X)
+3. Tool-X (https://github.com/rajkumardusad/Tool-X) // **A useless project** 
 
    >  370 Tools Installer 
 

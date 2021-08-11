@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #!/data/data/com.termux/files/usr/bin/bash 
 
-script_version="0.1.24"  # Alpha (pre 0.1.03 Alpha)
+script_version="0.1.25"  # Alpha (pre 0.1.03 Alpha)
 
 # Define variables
 red='\033[1;91m'; deep_green='\033[0;32m'; green='\033[1;92m'; yellow='\033[1;93m'; blue='\033[1;94m'; white='\033[1;97m'; 
@@ -185,6 +185,7 @@ function aircrack_ng() {
 
 			echo " [*] ready to run aircrack-ng"
 			echo " [*] aircrack-ng has been installed!"
+			sudo airmon-ng
 			# if cd $def_loc/weeman; then python weeman.py; fi 
 
 		} 
@@ -195,9 +196,13 @@ function aircrack_ng() {
 			read -p "You want to install aircrack-ng [y/n] " install
 
 			if [[ $install == 'y' ]]; then {
-				if pkg install root-repo; then pkg install aircrack-ng; fi 
+				# sudo // tsu pckage required
+				if pkg install root-repo tsu; then {
+					pkg install aircrack-ng
+				} fi 
 				echo " [*] ready to run aircrack-ng"
 				echo " [*] aircrack-ng has been installed!"
+				sudo airmon-ng
 				#if cd $def_loc/weeman; then python weeman.py; fi 
 			} 
 

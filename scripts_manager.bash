@@ -1,7 +1,7 @@
 #!/data/data/com.termux/files/usr/bin/bash 
 #!/usr/bin/env bash
 
-script_version="0.1.27"  # Alpha (pre 0.1.03 Alpha)
+script_version="0.1.28"  # Alpha (pre 0.1.03 Alpha)
 
 # Define variables
 red='\033[1;91m'; deep_green='\033[0;32m'; green='\033[1;92m'; yellow='\033[1;93m'; blue='\033[1;94m'; white='\033[1;97m'; 
@@ -221,7 +221,7 @@ function nmap() {
 	package="nmap"
 
 	# for dir/files 
-	if check_existence_package $package; then {
+	if check_existence_package "nmap"; then {
 
 		if [[ `cat $existence` == 'true' ]]; then {
 			echo " [*] ready to run $package"

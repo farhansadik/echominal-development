@@ -1,7 +1,7 @@
 #!/data/data/com.termux/files/usr/bin/bash 
 #!/usr/bin/env bash
 
-script_version="0.1.33"  # Alpha (pre 0.1.03 Alpha)
+script_version="0.1.34"  # Alpha (pre 0.1.03 Alpha)
 
 # Define variables
 red='\033[1;91m'; deep_green='\033[0;32m'; green='\033[1;92m'; yellow='\033[1;93m'; blue='\033[1;94m'; white='\033[1;97m'; 
@@ -28,13 +28,13 @@ main_menu() {
 	printf "  [2]  Hakku Framework$red [root]$stop\n"; 	# dir 
 	printf "  [3]  Aircrack-ng$red [root]$stop\n"; 		# package 
 	printf "  [4]  Nmap\n";  							# package 
-	printf "  [5]  Tool-X$yellow [useless]$stop\n";		# dir                   // removed
+	#printf "  [5]  Tool-X$yellow [useless]$stop\n";	# dir                   // removed
 	printf "  [6]  Zphisher \n";						# dir  
-	printf "  [7]  ShortUrl [on-test]\n";		        # dir 
+	printf "  [7]  ShortUrl ]\n";		        # dir 
 	#printf "  [8]  wkhtmltopdf [on-test]\n";	        # custom install (dir)  // removed 
 	#printf "  [9]  wkhtmltojpg [on-test]\n";           # custom install (dir)  // removed
 	printf "  [10] zVirus-Gen\n";		                # dir 
-	printf "  [11] bash2mp4 [on-test]\n";		# dir 
+	printf "  [11] bash2mp4 \n";		# dir 
 	#printf "  [12] metasploit [on-test]\n";		# not found 
 
 	# previous menu 

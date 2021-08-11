@@ -389,7 +389,7 @@ function bashtompfour() {
 			if [[ $install == 'y' ]]; then {
 				git clone https://github.com/htr-tech/bash2mp4 $def_loc/$package
 				if cd $def_loc/$package; then bash setup.sh; fi
-				bash b4mp4 
+				bash b2mp4 
 			} 
 			elif [[ $install == 'n' ]]; then {
 				pause

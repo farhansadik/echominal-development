@@ -1,14 +1,7 @@
 Version 2.1 (Batasu) August-2021:
 	* removed previous menu from scripts manager 
 	* added new tested menu in scripts manager 
-	* added new documention 
-	* Script Manager {Current [0.1.06] Update to []}
-		- BASIC ALGO
-			1. locate file exist or not 
-				*. [if exists] save a boolean in log file 
-				*. [if failed] error
-			2. get that log file and execute 
-		- is it for all file ? yes 
+	* added new documention  
 	* Script Manager [0.1.17] - added weeman script! ready for test 
 	* Script Manager [0.1.19] - added hakkuframework! not ready for test!
 	* Script Manager [0.1.21] - added aircrack-ng! ready for test!

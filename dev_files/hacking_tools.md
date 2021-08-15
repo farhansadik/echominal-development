@@ -1,34 +1,25 @@
 # Kali Linux Tools List 
 
 **Proposed And Tested Tools Termux**
-1. bash2mp4 (https://github.com/htr-tech/bash2mp4)
 
-   > Video/MP3 Downloader
-
-2. nmap (`pkg install curl nmap`)
-
-3. Tool-X (https://github.com/rajkumardusad/Tool-X) // **A useless project** 
-
-   >  370 Tools Installer 
-
-4. Zphisher (https://github.com/htr-tech/zphisher)
-
-   > Phishing Tools
-
-5. ShortUrl https://github.com/htr-tech/shorturl
-
-6. wkhtmltopdf/wkhtmltojpg
-
-7. A virus generator (https://github.com/ZechBron/zVirus-Gen) -- need some work!
-
-8. metasploit ()
-
-9. weeman 
-
-10. hakku-framework [https://github.com/4shadoww/hakkuframework] 
-
-11. Aircrack-ng (root-repo aircrack-ng)
-
+```
+[added]		1. bash2mp4 (https://github.com/htr-tech/bash2mp4) (Video/MP3 Downloader)
+[added]		2. nmap (`pkg install curl nmap`)
+[removed] 	3. Tool-X (https://github.com/rajkumardusad/Tool-X) // **A useless project*
+[added]		4. Zphisher (https://github.com/htr-tech/zphisher) (Phishing Tool)
+[added]		5. ShortUrl https://github.com/htr-tech/shorturl
+[removed]	6. wkhtmltopdf/wkhtmltojpg (not aviable for termux)
+[added]		7. A virus generator (https://github.com/ZechBron/zVirus-Gen)
+[not found]	8. metasploit ()
+[added]		9. weeman (phishing tool)
+[added] 	10. hakku-framework [https://github.com/4shadoww/hakkuframework] 
+[added]		11. Aircrack-ng (root-repo aircrack-ng) 
+```
+For Test 
+```
+[Test] 		1. https://github.com/saintmalik/Ethicaltools/blob/master/core/smtcore.py
+[Test]		2. https://www.kali.org/docs/nethunter/nethunter-rootless/
+```
 **Kali Menu **
 1 - Information Gathering <br>
 2 - Vulnerability Analysis <br>

@@ -1,5 +1,3 @@
-# Kali Linux Tools List 
-
 **Proposed And Tested Tools Termux**
 
 ```
@@ -20,7 +18,8 @@ For Test
 [Test] 		1. https://github.com/saintmalik/Ethicaltools/blob/master/core/smtcore.py
 [Test]		2. https://www.kali.org/docs/nethunter/nethunter-rootless/
 ```
-**Kali Menu **
+
+**Kali Menu** <br>
 1 - Information Gathering <br>
 2 - Vulnerability Analysis <br>
 3 - Exploitation Tools <br>

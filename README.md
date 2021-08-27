@@ -1,4 +1,4 @@
-# Project EchoMinal
+# EchoMinal Development 
 This script a simple manager for Termux. User can use is in a short way. This script is very helpful for beginners. Termux is an Android terminal emulator and Linux environment app that works directly with no rooting or setup required. A minimal base system is installed automatically - additional packages are available using the APT package manager.
 
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg?style=for-the-badge)](https://GitHub.com/YAS-opensource/BookMan/graphs/commit-activity)
@@ -6,7 +6,7 @@ This script a simple manager for Termux. User can use is in a short way. This sc
 [![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg?style=for-the-badge)](http://perso.crans.org/besson/LICENSE.html)
 
 > ## NOTE
-> THIS IS DEVELOPMENT PROJECT. TO VIEW STABLE RELEASE PROJECT PLEASE VISIT https://github.com/farhansadik/echominal
+> ### THIS IS DEVELOPMENT PROJECT. TO VIEW STABLE RELEASE PROJECT PLEASE VISIT https://github.com/farhansadik/echominal
 
 ### What's New
 

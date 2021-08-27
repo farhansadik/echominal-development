@@ -5,6 +5,9 @@ This script a simple manager for Termux. User can use is in a short way. This sc
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=for-the-badge)](http://makeapullrequest.com)
 [![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg?style=for-the-badge)](http://perso.crans.org/besson/LICENSE.html)
 
+> ## NOTE
+> THIS IS DEVELOPMENT PROJECT. TO VIEW STABLE RELEASE PROJECT PLEASE VISIT https://github.com/farhansadik/echominal
+
 ### What's New
 
 * Simple to use
@@ -15,32 +18,12 @@ This script a simple manager for Termux. User can use is in a short way. This sc
 * Removed unnecessary packages! 
 * Simplicity 
 
-### Requirements
-> Do not use Termux app from Google Play. It is deprecated!! Remember that [Android 5.x - 6.x](https://github.com/farhansadik/echominal/issues/56) is NOT SUPPORTED
-
-  * [Termux](https://f-droid.org/en/packages/com.termux/)
-  * [Termux-Api](https://f-droid.org/en/packages/com.termux.api/)
-  * [Android **Root** Access](https://en.wikipedia.org/wiki/Rooting_(Android)) **[Optional]**
-> After install make sure you've storage permission on **termux** and **termux apli**. Otherwise some of options won't work! <br>
-You may get "Permission denied" error when trying to access shared storage, even though the permission has been granted.
-
-**How to get storage permission:**
-* Go to Android Settings **-->** Applications **-->** Termux **-->** Permissions
-* Revoke Storage permission
-* Grant Storage permission again
 
 ### Installation Method
-**How to install [youtube video]** <br>
-https://www.youtube.com/watch?v=uKB5iv8P1mg&ab_channel=FarhanSadik
 
-> Just **copy** and **paste** those commands, one by one:
 ```bash
-pkg install git 
-```
-```bash 
+pkg install git  
 git clone https://github.com/farhansadik/echominal.git ~/.config/echominal
-```
-```bash
 bash ~/.config/echominal/tools/install
 ```
 To **run** echominal type: 
@@ -49,16 +32,6 @@ echominal
 ```
 
 > **Note:** Some of device may not work properly. Then you'll have to install it manually. 
-
-### Shortcut Keywords and Usages
-
-| Description      | Syntax |
-| :---------: | ----------- |
-| Install a package      | $ **install** or **i** package_name <br>$ install vim <br> **or** <br>$ i vim |
-| Install multiple package   | $ **install** or **i** package_1 package_2 package_3 <br>$ install vim nano fish <br> **or** <br>$ i vim nano fish  |
-| Remove a package  | $ **remove** or **r** package_name <br>$ remove vim <br> **or** <br>$ r vim |
-| Update/Upgrade all Packages   | $ **update** or **u**  |
-| Search a Package   | $ **search** or **s** package_name  |
 
 ### 3rd Party Scripts
 1. [Weeman](https://github.com/evait-security/weeman)
